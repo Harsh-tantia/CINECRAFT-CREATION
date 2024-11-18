@@ -782,7 +782,7 @@ section.portfolio-section {
 /* Adjust layout for mobile view */
 @media (max-width: 768px) {
   .clash-card {
-    width: 60%;
+    width: 100%;
     height: auto;  /* Adjust width for mobile, so it takes the full width */
     margin: 0 10px;  /* Add some spacing between cards */
   }
