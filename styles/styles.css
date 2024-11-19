@@ -21,14 +21,17 @@ html {
 }
 
 header {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
+  position: sticky;
+  /* top: 20px; */
+  /* left: 20px; */
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background: #020024;
+  /* background: #fff; */
+  padding: 20px;
 }
 
 .logo {
@@ -42,7 +45,7 @@ header {
   cursor: pointer;
   font-size: 1.8rem;
   color: var(--light-color);
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .navbar {
@@ -115,7 +118,6 @@ header {
 .navbar ul li a:hover {
   color: var(--tertiary-color);
 }
-
 
 .intro-section {
   display: flex;
@@ -217,86 +219,6 @@ header {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-/* Media Query for smaller screens (Mobile & Tablet) */
-@media (max-width: 768px) {
-  .intro-section {
-    justify-content: center;
-    padding-left: 0;
-    padding-right: 0;
-    height: auto;
-    text-align: center; /* Center text */
-    background-image: none; /* Remove background image */
-    padding-top: 20vh /* Push content down by 30px */
-  }
-
-  .intro-text {
-    text-align: center; /* Center text in the intro section */
-    padding: 0 15px; /* Add some padding for better spacing */
-    margin-bottom: 30px; /* Add 30px margin below content */
-  }
-
-  .intro-text span {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .intro-text h2 {
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 20px;
-  }
-
-  .intro-text p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .intro-input-container {
-    flex-direction: column; /* Stack input and button vertically */
-    align-items: center;
-    gap: 15px;
-  }
-
-  .intro-input {
-    width: 100%; /* Make input take up full width on smaller screens */
-    max-width: 300px; /* Limit max width */
-    padding: 10px 15px;
-  }
-
-  .subscribe-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 100%; /* Make button take up full width */
-    max-width: 300px; /* Limit max width */
-  }
-}
-
-/* Media Query for extra small screens (Mobile Portrait) */
-@media (max-width: 480px) {
-  .intro-text h2 {
-    font-size: 30px;
-    line-height: 40px;
-    margin-bottom: 15px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .intro-input {
-    width: 100%;
-    max-width: 280px; /* Smaller input on very small screens */
-    padding: 8px 12px;
-  }
-
-  .subscribe-btn {
-    padding: 8px 18px;
-    font-size: 14px;
-    width: 100%;
-    max-width: 280px; /* Smaller button on very small screens */
   }
 }
 
@@ -419,44 +341,6 @@ header {
   line-height: 26px;
   margin: 0 0 15px 0;
 }
-/* Mobile Responsiveness */
-@media (max-width: 767px) {
-  .services {
-    flex-direction: column;
-    padding: 80px 5%;  /* Adjusted padding for smaller screens */
-  }
-
-  .services-info {
-    width: 100%;
-    margin-bottom: 30px;
-    text-align: left;  /* Align content to the left */
-  }
-
-  .section-title,
-  .section-heading,
-  .section-line,
-  .section-description,
-  .view-all-btn {
-    text-align: left;  /* Ensure all text is aligned to the left */
-  }
-
-  .services-grid {
-    width: 100%;
-    grid-template-columns: 1fr 1fr;  /* Change to 2 columns */
-    gap: 20px;  /* Adjust gap between items */
-  }
-
-  .service {
-    text-align: left;  /* Align service items text to the left */
-  }
-
-  .view-all-btn {
-    width: auto; /* Button width stays auto to adjust based on text content */
-    padding: 18px 25px;  /* Adjust padding for button */
-    margin-left: 0;  /* No margin, aligns left */
-  }
-}
-
 
 section.portfolio-section {
   padding-bottom: 15vh;
@@ -517,25 +401,25 @@ section.portfolio-section {
 }
 
 .img-1 {
-  background: url('../assets/1.gif') no-repeat center center;
+  background: url('../assets/1.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .img-2 {
-  background: url('../assets/2.gif') no-repeat center center;
+  background: url('../assets/2.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .img-3 {
-  background: url('../assets/3.gif') no-repeat center center;
+  background: url('../assets/3.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .img-4 {
-  background: url('../assets/4.gif') no-repeat center center;
+  background: url('../assets/1.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
@@ -613,21 +497,6 @@ section.portfolio-section {
     line-height: 26px;
     margin: 0 0 15px 0;
 }
-
-/* Media Query for 2x2 Grid layout on mobile and tablet */
-@media screen and (max-width: 1024px) {
-  .stats-section {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens (tablet, small screens) */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .stats-section {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile screens */
-    padding: 10vh 0;
-  }
-}
-
 
 .slide-container {
   margin: auto;
@@ -779,20 +648,6 @@ section.portfolio-section {
   /* Remove default content */
 }
 
-/* Adjust layout for mobile view */
-@media (max-width: 768px) {
-  .clash-card {
-    width: 50%;
-    height: auto;  /* Adjust width for mobile, so it takes the full width */
-    margin: 0 10px;  /* Add some spacing between cards */
-  }
-
-  .slick-prev, .slick-next {
-    display: none;  /* Hide the arrows on smaller screens */
-  }
-}
-
-
 .input-container {
   text-align: center;
   margin-top: 50px;
@@ -926,78 +781,6 @@ section.portfolio-section {
   bottom: -30%;
   /* Push the image half out of the form */
 }
-@media only screen and (max-width: 768px) {
-  /* The wrapper-review should stack for smaller screens */
-  .wrapper-review {
-    width: 90%;
-    height: auto;
-    flex-direction: column;
-    box-shadow: none;
-    margin: 20% auto;
-  }
-
-  /* Form section now takes full width and no left-right padding */
-  .form-section {
-    width: 100%;
-    padding: 20px 10px;
-  }
-
-  /* Adjust text-align and input fields for smaller screens */
-  .input-field input,
-  .input-field textarea {
-    font-size: 14px;
-  }
-
-  .submit-button button {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
-
-  /* Make the form header icon smaller and adjust text */
-  .form-header i {
-    font-size: 24px;
-    padding: 12px;
-  }
-
-  .form-header p {
-    font-size: 20px;
-  }
-
-  /* Remove background gradient and image in the info section */
-  .info-section {
-    display: none; /* Hide the background section completely */
-  }
-
-  /* Adjust the card section */
-  .card {
-    width: 100%;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-  }
-
-  /* Image that should appear only on mobile view, below the form */
-  .mobile-image {
-    display: block; /* Make sure image is visible on mobile */
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
-}
-
-/* For larger devices (e.g., tablets and desktops) */
-@media only screen and (min-width: 769px) {
-  .info-section {
-    display: flex; /* Display the info-section normally on larger screens */
-  }
-
-  .mobile-image {
-    display: none; /* Hide mobile-specific image on larger screens */
-  }
-}
-
-
-
 .footer {
   position: relative;
   width: 100%;
@@ -1131,6 +914,86 @@ footer p .highlighted-name:hover {
     background-positon-x: 0px;
   }
 }
+/* intro section */
+@media (max-width: 768px) {
+  .intro-section {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    text-align: center; /* Center text */
+    background-image: none; /* Remove background image */
+    padding-top: 20vh /* Push content down by 30px */
+  }
+
+  .intro-text {
+    text-align: center; /* Center text in the intro section */
+    padding: 0 15px; /* Add some padding for better spacing */
+    margin-bottom: 30px; /* Add 30px margin below content */
+  }
+
+  .intro-text span {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .intro-text h2 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .intro-input-container {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .intro-input {
+    width: 100%; /* Make input take up full width on smaller screens */
+    max-width: 300px; /* Limit max width */
+    padding: 10px 15px;
+  }
+
+  .subscribe-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%; /* Make button take up full width */
+    max-width: 300px; /* Limit max width */
+  }
+}
+
+/* Media Query for extra small screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .intro-text h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .intro-input {
+    width: 100%;
+    max-width: 280px; /* Smaller input on very small screens */
+    padding: 8px 12px;
+  }
+
+  .subscribe-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px; /* Smaller button on very small screens */
+  }
+}
 
 @media (max-width: 768px) {
   .stats-section {
@@ -1141,5 +1004,140 @@ footer p .highlighted-name:hover {
   .stats-card {
     margin-bottom: 20px;
     width: 90%;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .services {
+    flex-direction: column;
+    padding: 80px 5%;  /* Adjusted padding for smaller screens */
+  }
+
+  .services-info {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: left;  /* Align content to the left */
+  }
+
+  .section-title,
+  .section-heading,
+  .section-line,
+  .section-description,
+  .view-all-btn {
+    text-align: left;  /* Ensure all text is aligned to the left */
+  }
+
+  .services-grid {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;  /* Change to 2 columns */
+    gap: 20px;  /* Adjust gap between items */
+  }
+
+  .service {
+    text-align: left;  /* Align service items text to the left */
+  }
+
+  .view-all-btn {
+    width: auto; /* Button width stays auto to adjust based on text content */
+    padding: 18px 25px;  /* Adjust padding for button */
+    margin-left: 0;  /* No margin, aligns left */
+  }
+}
+
+
+/* stats section */
+@media screen and (max-width: 1024px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens (tablet, small screens) */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile screens */
+    padding: 10vh 0;
+  }
+}
+
+
+/* clash card */
+@media (max-width: 768px) {
+  .clash-card {
+    width: 50%;
+    height: auto;  /* Adjust width for mobile, so it takes the full width */
+    margin: 0 10px;  /* Add some spacing between cards */
+  }
+
+  .slick-prev, .slick-next {
+    display: none;  /* Hide the arrows on smaller screens */
+  }
+}
+
+/* wrapper review */
+@media only screen and (max-width: 768px) {
+  /* The wrapper-review should stack for smaller screens */
+  .wrapper-review {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    box-shadow: none;
+    margin: 20% auto;
+  }
+
+  /* Form section now takes full width and no left-right padding */
+  .form-section {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  /* Adjust text-align and input fields for smaller screens */
+  .input-field input,
+  .input-field textarea {
+    font-size: 14px;
+  }
+
+  .submit-button button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  /* Make the form header icon smaller and adjust text */
+  .form-header i {
+    font-size: 24px;
+    padding: 12px;
+  }
+
+  .form-header p {
+    font-size: 20px;
+  }
+
+  .info-section {
+    display: none; 
+  }
+
+  .card {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .mobile-image {
+    display: block; 
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/* For larger devices (e.g., tablets and desktops) */
+@media only screen and (min-width: 769px) {
+  .info-section {
+    display: flex; 
+  }
+
+  .mobile-image {
+    display: none; 
   }
 }
