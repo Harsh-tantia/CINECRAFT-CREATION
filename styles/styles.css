@@ -401,25 +401,25 @@ section.portfolio-section {
 }
 
 .img-1 {
-  background: url('../assets/1.jpg') no-repeat center center;
+  background: url('../assets/1.gif') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .img-2 {
-  background: url('../assets/2.jpg') no-repeat center center;
+  background: url('../assets/2.gif') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .img-3 {
-  background: url('../assets/3.jpg') no-repeat center center;
+  background: url('../assets/3.gif') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .img-4 {
-  background: url('../assets/1.jpg') no-repeat center center;
+  background: url('../assets/4.gif') no-repeat center center;
   background-size: cover;
   width: 100%;
 }
