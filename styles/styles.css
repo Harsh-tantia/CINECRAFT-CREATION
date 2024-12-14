@@ -336,21 +336,32 @@ section.portfolio-section {
 
 .portfolio-heading {
   font-size: 36px;
+  /* Adjust the size as needed */
   font-weight: 700;
+  /* Bold font */
   text-transform: uppercase;
+  /* Make the text uppercase */
   text-align: center;
+  /* Center the text horizontally */
   color: #ffffff;
+  /* Use your primary color */
   margin-bottom: 30px;
+  /* Space below the heading */
   letter-spacing: 2px;
+  /* Add some spacing between letters */
 }
 
 .portfolio-heading::after {
   content: '';
   display: block;
   width: 80px;
+  /* Width of the underline */
   height: 4px;
+  /* Thickness of the underline */
   background-color: #ffffff;
+  /* Match the primary color */
   margin: 10px auto 0;
+  /* Center the underline and add space */
 }
 
 .container {
@@ -371,8 +382,8 @@ section.portfolio-section {
 }
 
 .img {
-  max-width: 100%;
-  height: auto;  
+  height: 50%;
+  margin: 10px;
   box-shadow: 10px 14px 20px 0px #00d9ff;
 }
 
