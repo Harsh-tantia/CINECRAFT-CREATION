@@ -898,6 +898,45 @@ footer p .highlighted-name:hover {
     background-positon-x: 0px;
   }
 }
+@media (max-width: 768px) {
+  .row {
+    display: grid;
+    grid-template-areas:
+      "item2"
+      "item3";
+    grid-template-columns: 1fr;
+    gap: 5px; /* Reduced gap between items */
+  }
+
+  /* Ensure all images are responsive */
+  .img-1,
+  .img-2,
+  .img-3,
+  .img-4 {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Hide images 1 and 4 in mobile view */
+  .img-1, 
+  .img-4 {
+    display: none;
+  }
+
+  /* Visible images 2 and 3 */
+  .img-2,
+  .img-3 {
+    display: block; /* Ensure visibility */
+    margin-bottom: 5px; /* Reduces space between 2 and 3 */
+  }
+
+  /* Adjust specific heights for better layout */
+  .img-2,
+  .img-3 {
+    height: 200px; /* Adjust size for horizontal items */
+  }
+
+}
 /* intro section */
 @media (max-width: 768px) {
   .intro-section {
